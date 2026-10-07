@@ -1,0 +1,105 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    background: #007e9f;
+    color: #1f2b4d;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card {
+    width: 400px;
+    max-width: 100%;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 26px;
+    line-height: 34px;
+    overflow-wrap: anywhere;
+}
+
+.subtitle, .footer { color: #677181; text-align: center; font-size: 13px; }
+.subtitle { margin: 4px 0 0; }
+.footer { margin: 24px 0 0; }
+form { margin-top: 28px; }
+.field { margin-bottom: 16px; }
+label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: bold; }
+
+input {
+    width: 100%;
+    height: 44px;
+    padding: 12px;
+    border: 1px solid #e3e8ee;
+    border-radius: 7px;
+    background: #f7f9fb;
+    color: #1f2b4d;
+    font: inherit;
+}
+
+input::placeholder { color: #677181; }
+input[aria-invalid="true"] { border-color: #b42335; }
+input:focus { outline: 2px solid #087f97; outline-offset: 2px; }
+.password-field { position: relative; }
+.password-field input { padding-right: 44px; }
+.password-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #677181;
+    cursor: pointer;
+}
+
+.password-toggle[aria-pressed="true"] .eye-slash { display: none; }
+
+.submit-button {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 7px;
+    background: #087f97;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.submit-button:hover { background: #066b80; }
+button:focus-visible, a:focus-visible { outline: 2px solid #087f97; outline-offset: 3px; }
+a { color: #087f97; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.hint { margin: 6px 0 0; font-size: 11px; color: #677181; }
+.error { margin: 6px 0 0; font-size: 12px; color: #b42335; }
+.error:empty { display: none; }
+.error-message, .success { margin: 24px 0 0; padding: 12px; border-radius: 7px; }
+.error-message { color: #b42335; background: #fff0f1; }
+.success { color: #146b4e; background: #eaf6ef; }
+.account-details { margin: 28px 0 0; }
+.account-details dt { font-weight: bold; }
+.account-details dd { margin: 6px 0 0; color: #677181; overflow-wrap: anywhere; }
+[hidden] { display: none; }
+
+@media (max-width: 480px) {
+    .card { padding: 40px 28px; }
+    input { font-size: 16px; }
+}
